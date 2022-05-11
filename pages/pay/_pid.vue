@@ -4,15 +4,10 @@
     <div class="checkout py-container pay">
       <div class="checkout-tit">
         <h4 class="fl tit-txt">
-          <span class="success-icon"></span
-          ><span class="success-info"
-            >订单提交成功，请您及时付款！订单号：{{ payObj.out_trade_no }}</span
-          >
+          <span class="success-icon"></span><span class="success-info">订单提交成功，请您及时付款！订单号：{{ payObj.out_trade_no
+          }}</span>
         </h4>
-        <span class="fr"
-          ><em class="sui-lead">应付金额：</em
-          ><em class="orange money">￥{{ payObj.total_fee }}</em></span
-        >
+        <span class="fr"><em class="sui-lead">应付金额：</em><em class="orange money">￥{{ payObj.total_fee }}</em></span>
         <div class="clearfix"></div>
       </div>
       <div class="checkout-steps">

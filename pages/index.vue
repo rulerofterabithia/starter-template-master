@@ -3,12 +3,7 @@
     <!-- 幻灯片 开始 -->
     <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
-        <div
-          v-for="banner in bannerList"
-          :key="banner.id"
-          class="swiper-slide"
-          style="background: #040b1b"
-        >
+        <div v-for="banner in bannerList" :key="banner.id" class="swiper-slide" style="background: #040b1b">
           <a target="_blank" :href="banner.linkUrl">
             <img :src="banner.imageUrl" :alt="banner.title" />
           </a>
@@ -17,15 +12,9 @@
 
       <div class="swiper-pagination swiper-pagination-white"></div>
 
-      <div
-        class="swiper-button-prev swiper-button-white"
-        slot="button-prev"
-      ></div>
+      <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
 
-      <div
-        class="swiper-button-next swiper-button-white"
-        slot="button-next"
-      ></div>
+      <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
     </div>
     <!-- 幻灯片 结束 -->
 
@@ -45,36 +34,21 @@
                 <li v-for="course in courseList" :key="course.id">
                   <div class="cc-l-wrap">
                     <section class="course-img">
-                      <img
-                        :src="course.cover"
-                        class="img-responsive"
-                        :alt="course.title"
-                      />
+                      <img :src="course.cover" class="img-responsive" :alt="course.title" />
 
                       <div class="cc-mask">
-                        <a
-                          :href="'/course/' + course.id"
-                          title="开始学习"
-                          class="comm-btn c-btn-1"
-                          >开始学习</a
-                        >
+                        <a :href="'/course/' + course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                       </div>
                     </section>
 
                     <h3 class="hLh30 txtOf mt10">
-                      <a
-                        :href="'/course/' + course.id"
-                        :title="course.title"
-                        class="course-title fsize18 c-333"
-                        >{{ course.title }}</a
-                      >
+                      <a :href="'/course/' + course.id" :title="course.title" class="course-title fsize18 c-333">{{
+                          course.title
+                      }}</a>
                     </h3>
 
                     <section class="mt10 hLh20 of">
-                      <span
-                        class="fr jgTag bg-green"
-                        v-if="Number(course.price) === 0"
-                      >
+                      <span class="fr jgTag bg-green" v-if="Number(course.price) === 0">
                         <i class="c-fff fsize12 f-fA">免费</i>
                       </span>
 
@@ -120,12 +94,8 @@
                     </div>
 
                     <div class="mt10 hLh30 txtOf tac">
-                      <a
-                        :href="'/teacher/' + teacher.id"
-                        :title="teacher.name"
-                        class="fsize18 c-666"
-                        >{{ teacher.name }}</a
-                      >
+                      <a :href="'/teacher/' + teacher.id" :title="teacher.name" class="fsize18 c-666">{{ teacher.name
+                      }}</a>
                     </div>
 
                     <div class="hLh30 txtOf tac">

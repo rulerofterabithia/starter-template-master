@@ -12,12 +12,7 @@
       <div>
         <article class="c-v-pic-wrap" style="height: 357px">
           <section class="p-h-video-box" id="videoPlay">
-            <img
-              height="357px"
-              :src="course.cover"
-              :alt="course.title"
-              class="dis c-v-pic"
-            />
+            <img height="357px" :src="course.cover" :alt="course.title" class="dis c-v-pic" />
           </section>
         </article>
         <aside class="c-attr-wrap">
@@ -27,14 +22,10 @@
             </h2>
             <section class="c-attr-jg">
               <span class="c-fff">价格：</span>
-              <b class="c-yellow" style="font-size: 24px"
-                >￥{{ course.price }}</b
-              >
+              <b class="c-yellow" style="font-size: 24px">￥{{ course.price }}</b>
             </section>
             <section class="c-attr-mt c-attr-undis">
-              <span class="c-fff fsize14"
-                >主讲： {{ course.teacherName }}&nbsp;&nbsp;&nbsp;</span
-              >
+              <span class="c-fff fsize14">主讲： {{ course.teacherName }}&nbsp;&nbsp;&nbsp;</span>
             </section>
             <section class="c-attr-mt of">
               <span class="ml10 vam">
@@ -42,20 +33,11 @@
                 <a class="c-fff vam" title="收藏" href="#">收藏</a>
               </span>
             </section>
-            <section
-              v-if="isBuy || Number(course.price) === 0"
-              class="c-attr-mt"
-            >
+            <section v-if="isBuy || Number(course.price) === 0" class="c-attr-mt">
               <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
             </section>
             <section v-else class="c-attr-mt">
-              <a
-                @click="createOrder()"
-                href="#"
-                title="立即购买"
-                class="comm-btn c-btn-3"
-                >立即购买</a
-              >
+              <a @click="createOrder()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
             </section>
           </section>
         </aside>
@@ -122,34 +104,17 @@
                       <menu id="lh-menu" class="lh-menu mt10 mr10">
                         <ul>
                           <!-- 文件目录 -->
-                          <li
-                            class="lh-menu-stair"
-                            v-for="chapter in chapterVideoList"
-                            :key="chapter.id"
-                          >
-                            <a
-                              href="javascript: void(0)"
-                              :title="chapter.title"
-                              class="current-1"
-                            >
-                              <em class="lh-menu-i-1 icon18 mr10"></em
-                              >{{ chapter.title }}
+                          <li class="lh-menu-stair" v-for="chapter in chapterVideoList" :key="chapter.id">
+                            <a href="javascript: void(0)" :title="chapter.title" class="current-1">
+                              <em class="lh-menu-i-1 icon18 mr10"></em>{{ chapter.title }}
                             </a>
                             <ol class="lh-menu-ol" style="display: block">
-                              <li
-                                class="lh-menu-second ml30"
-                                v-for="video in chapter.children"
-                                :key="video.id"
-                              >
-                                <a
-                                  :href="'/player/' + video.videoSourceId"
-                                  target="_blank"
-                                >
+                              <li class="lh-menu-second ml30" v-for="video in chapter.children" :key="video.id">
+                                <a :href="'/player/' + video.videoSourceId" target="_blank">
                                   <span class="fr">
                                     <i class="free-icon vam mr10">免费试听</i>
                                   </span>
-                                  <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em
-                                  >{{ video.title }}
+                                  <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>{{ video.title }}
                                 </a>
                               </li>
                             </ol>

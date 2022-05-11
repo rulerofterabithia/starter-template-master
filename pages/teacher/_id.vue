@@ -15,10 +15,8 @@
               <img :src="teacher.avatar" />
             </section>
             <h3 class="hLh30">
-              <span class="fsize24 c-333"
-                >{{ teacher.name }}&nbsp;
-                {{ teacher.level === 1 ? "高级讲师" : "首席讲师" }}</span
-              >
+              <span class="fsize24 c-333">{{ teacher.name }}&nbsp;
+                {{ teacher.level === 1 ? "高级讲师" : "首席讲师" }}</span>
             </h3>
             <section class="mt10">
               <span class="t-tag-bg">{{ teacher.intro }}</span>
@@ -46,9 +44,7 @@
           <!-- /无数据提示 开始-->
           <section class="no-data-wrap" v-if="courseList.length == 0">
             <em class="icon30 no-data-ico">&nbsp;</em>
-            <span class="c-666 fsize14 ml10 vam"
-              >没有相关数据，小编正在努力整理中...</span
-            >
+            <span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在努力整理中...</span>
           </section>
           <!-- /无数据提示 结束-->
           <article class="comm-course-list">
@@ -58,23 +54,12 @@
                   <section class="course-img">
                     <img :src="course.cover" class="img-responsive" />
                     <div class="cc-mask">
-                      <a
-                        :href="'/course/'+course.id"
-                        title="开始学习"
-                        target="_blank"
-                        class="comm-btn c-btn-1"
-                        >开始学习</a
-                      >
+                      <a :href="'/course/' + course.id" title="开始学习" target="_blank" class="comm-btn c-btn-1">开始学习</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
-                    <a
-                      :href="'/course/'+course.id"
-                      :title="course.title"
-                      target="_blank"
-                      class="course-title fsize18 c-333"
-                      >{{ course.title }}</a
-                    >
+                    <a :href="'/course/' + course.id" :title="course.title" target="_blank"
+                      class="course-title fsize18 c-333">{{ course.title }}</a>
                   </h3>
                 </div>
               </li>

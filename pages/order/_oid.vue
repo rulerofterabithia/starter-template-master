@@ -23,19 +23,11 @@
           </tr>
           <tr class="good">
             <td class="name First">
-              <a
-                target="_blank"
-                :href="'https://localhost:3000/course/' + order.courseId"
-              >
-                <img :src="order.courseCover"
-              /></a>
+              <a target="_blank" :href="'https://localhost:3000/course/' + order.courseId">
+                <img :src="order.courseCover" /></a>
               <div class="goodInfo">
                 <input type="hidden" class="ids ids_14502" value="14502" />
-                <a
-                  target="_blank"
-                  :href="'https://localhost:3000/course/' + order.courseId"
-                  >{{ order.courseTitle }}</a
-                >
+                <a target="_blank" :href="'https://localhost:3000/course/' + order.courseId">{{ order.courseTitle }}</a>
               </div>
             </td>
             <td class="price">
@@ -52,10 +44,8 @@
             <td class="Billing tr" colspan="3">
               <div class="tr">
                 <p>
-                  共 <strong class="red">1</strong> 件商品，合计<span
-                    class="red f20"
-                    >￥<strong>{{ order.totalFee }}</strong></span
-                  >
+                  共 <strong class="red">1</strong> 件商品，合计<span class="red f20">￥<strong>{{ order.totalFee
+                  }}</strong></span>
                 </p>
               </div>
             </td>
@@ -64,15 +54,11 @@
       </table>
       <div class="Finish">
         <div class="fr" id="AgreeDiv">
-          <label for="Agree"
-            ><p class="on">
-              <input type="checkbox" checked="checked" />我已阅读并同意<a
-                href="javascript:"
-                target="_blank"
-                >《谷粒学院购买协议》</a
-              >
-            </p></label
-          >
+          <label for="Agree">
+            <p class="on">
+              <input type="checkbox" checked="checked" />我已阅读并同意<a href="javascript:" target="_blank">《谷粒学院购买协议》</a>
+            </p>
+          </label>
         </div>
         <div class="clear"></div>
         <div class="Main fl">
@@ -81,10 +67,8 @@
           </div>
           <div class="fr">
             <p>
-              共 <strong class="red">1</strong> 件商品，合计<span
-                class="red f20"
-                >￥<strong id="AllPrice">{{ order.totalFee }}</strong></span
-              >
+              共 <strong class="red">1</strong> 件商品，合计<span class="red f20">￥<strong id="AllPrice">{{ order.totalFee
+              }}</strong></span>
             </p>
           </div>
         </div>
